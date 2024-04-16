@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color-scheme: dark light;
 }
 
 .offscreen {
@@ -134,7 +135,26 @@ img {
   flex-flow: column;
   gap: 1em;
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base: #212121;
+    --text: #cfcfcf;
+  }
+  .header {
+    background-color: #212121;
+    --text: #cfcfcf;
+  }
+}
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --base: #cfcfcf;
+    --text: #212121;
+  }
+  .header {
+    --text: 212121;
+  }
+}
 @media screen and (min-width: 601px) {
   .product {
     width: 30%;
